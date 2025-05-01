@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "c76b592e-55f5-4054-a632-458a49132648",
+		"name": "Hackathon1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\":2,\r\n    \"type\":\"thermo\",\r\n    \"description\":\"checking temperature\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9005/api/device/addDevice"
+			},
+			"response": []
+		},
+		{
+			"name": "addToManual",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deviceId\":2,\r\n    \"deviceType\":\"bp\",\r\n    \"paramName\":\"diastolic\",\r\n    \"maximum\":130,\r\n    \"minimum\":120\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9002/api/data/addtoManual"
+			},
+			"response": []
+		},
+		{
+			"name": "add patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"ram\",\r\n    \"password\":\"ram1\",\r\n    \"fullName\":\"ram kumar\",\r\n    \"phoneNo\":7730923490,\r\n    \"email\":\"ram@gmail.com\",\r\n    \"address\":\"chennai\",\r\n    \"healthProviderID\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9004/api/patientDetailAPI/savePatientDetails"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\r\n    \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8102/getName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8102/getName"
+			},
+			"response": []
+		}
+	]
+}
